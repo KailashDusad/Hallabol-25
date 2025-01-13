@@ -1,0 +1,82 @@
+/* General Popup Style */
+.alert-popup {
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease, fadeOut 0.5s 4s ease forwards;
+  }
+  
+  /* Different Alert Types */
+  .alert-success {
+    background: linear-gradient(to right, #4caf50, #81c784);
+    color: white;
+  }
+  
+  .alert-error {
+    background: linear-gradient(to right, #f44336, #e57373);
+    color: white;
+  }
+  
+  .alert-warning {
+    background: linear-gradient(to right, #ff9800, #ffb74d);
+    color: black;
+  }
+  
+  .alert-info {
+    background: linear-gradient(to right, #2196f3, #64b5f6);
+    color: white;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
+  }
+  
+  .close-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .alert-popup {
+      width: calc(100% - 30px);
+      font-size: 0.9rem;
+    }
+  }
+  

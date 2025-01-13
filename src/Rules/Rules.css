@@ -1,0 +1,126 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  .main-container {
+    padding: 20px;
+  }
+  
+  .games-section {
+    background: #1f1f1f;
+    border-radius: 15px;
+    padding: 40px 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    margin: auto;
+    color: white;
+  }
+  
+  .sports-heading h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ff7f50;
+    margin-bottom: 30px;
+  }
+  
+  .sports-item-heading h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ff3e75;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .guidlines {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .guidlines li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    line-height: 1.6;
+    font-size: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+  }
+  
+  .guidlines li:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .register-button {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .register-button a {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #ff7f50, #ff3e75);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .register-button a:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(255, 63, 117, 0.7);
+  }
+  
+  @media (max-width: 768px) {
+    .sports-heading h1 {
+      font-size: 2rem;
+    }
+  
+    .sports-item-heading h2 {
+      font-size: 1.5rem;
+    }
+  
+    .guidlines li {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    .register-button a {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .games-section {
+      padding: 20px 10px;
+    }
+  
+    .sports-heading h1 {
+      font-size: 1.8rem;
+    }
+  
+    .sports-item-heading h2 {
+      font-size: 1.2rem;
+    }
+  
+    .guidlines li {
+      font-size: 0.8rem;
+      padding: 8px;
+    }
+  
+    .register-button a {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  

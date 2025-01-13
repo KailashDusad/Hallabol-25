@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './RegisterForm.css';
-
+import Alert from './Alert';
 const RegisterForm = () => {
+  
   const [formData, setFormData] = useState({
     gameselect: '',
     teamname: '',
@@ -23,9 +24,13 @@ const RegisterForm = () => {
     "seven stone": 6,
     "freesbe": 7,
     "throw ball": 6,
+    "carrom": 4,
+    "dodge ball": 6,
+    "chess": 2
   };
 
   const [teamMembers, setTeamMembers] = useState([]);
+  const [alert, setAlert] = useState({ show: false, type: '', message: '' });
 
   const handleGameChange = (e) => {
     const selectedGame = e.target.value;
@@ -47,8 +52,18 @@ const RegisterForm = () => {
     setTeamMembers(updatedMembers);
   };
 
+  const showAlert = (type, message) => {
+    setAlert({ show: true, type, message });
+    setTimeout(() => setAlert({ show: false, type: '', message: '' }), 4000);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!formData.gameselect || !formData.teamname || !formData.teamleader || !formData.teamleaderroll || !formData.teamleaderemail || !formData.teamleadercontact || teamMembers.some((member) => !member.name || !member.rollNo)) {
+      // alert('Please fill all the fields.');
+      showAlert('warning', 'Please fill all the required fields!');
+      return;
+    }
     const formattedMembers = teamMembers.flatMap((member) => [
       member.name,
       member.rollNo,
@@ -59,12 +74,12 @@ const RegisterForm = () => {
       members: formattedMembers,
     };
   
-    console.log('Submitting data:', finalData); // Debugging line
   
     try {
       const response = await axios.post('http://localhost:5000/register', finalData);
       if (response.status === 200) {
-        alert('Registration successful!');
+        // alert('Registration successful!');
+        showAlert('success', 'Registration successful!');
         setFormData({
           gameselect: '',
           teamname: '',
@@ -77,13 +92,15 @@ const RegisterForm = () => {
         setTeamMembers([]);
       }
     } catch (err) {
-      alert('Error saving data. Please try again later.');
+      // alert('Error saving data. Please try again later.');
+      showAlert('error', 'Error saving data. Please try again later.');
     }
   };
   
 
   return (
     <div className="container mt-5 fade-in">
+      {alert.show && <Alert type={alert.type} message={alert.message} onClose={() => setAlert({ show: false })} />}
       <h2 className="text-center">Register for Hallabol Games</h2>
       <form className="needs-validation" onSubmit={handleSubmit} noValidate>
         <div className="mb-3">
@@ -104,26 +121,25 @@ const RegisterForm = () => {
           <div className="invalid-feedback">Please select a game.</div>
         </div>
 
-        {/* Other form fields */}
-        {['teamname', 'teamleader', 'teamleaderroll', 'teamleaderemail', 'teamleadercontact'].map((field) => (
-          <div key={field} className="mb-3">
-            <label htmlFor={field} className="form-label">
-              {field.split(/(?=[A-Z])/).join(' ')}
-            </label>
-            <input
-              id={field}
-              name={field}
-              type={field === 'teamleaderemail' ? 'email' : field === 'teamleadercontact' ? 'tel' : 'text'}
-              className="form-control"
-              value={formData[field]}
-              onChange={(e) => setFormData({ ...formData, [field]: e.target.value })}
-              required
-            />
-            <div className="invalid-feedback">Please provide a valid {field}.</div>
-          </div>
-        ))}
-
-        {/* Team members */}
+          {['teamname', 'teamleader', 'teamleaderroll', 'teamleaderemail', 'teamleadercontact'].map((field) => (
+            <div key={field} className="mb-3">
+              <label htmlFor={field} className="form-label">
+                {field.replace(/([a-z])([A-Z])/g, '$1 $2').replace('teamname', 'Team Name ').replace('teamleader', 'Team Leader ').replace('roll', 'Roll No').replace('email', 'Email').replace('contact', 'Contact')}
+                {/* {field.replace(/([a-z])([A-Z])/g, '$1 $2').replace('teamleader', 'Team Leader ')} */}
+              </label>
+              <input
+                id={field}
+                name={field}
+                type={field === 'teamleaderemail' ? 'email' : field === 'teamleadercontact' ? 'tel' : 'text'}
+                className="form-control"
+                value={formData[field]}
+                onChange={(e) => setFormData({ ...formData, [field]: e.target.value })}
+                required
+              />
+              <div className="invalid-feedback">Please provide a valid {field}.</div>
+            </div>
+          ))}
+          
         <div id="team-members">
           {teamMembers.map((member, index) => (
             <div key={member.id}>

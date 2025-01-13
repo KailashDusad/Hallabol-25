@@ -35,22 +35,22 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../public/static/g2.jpg') no-repeat center center/cover;
+    background: url('../public/static/games/Badminton.jpg') no-repeat center center/cover;
     z-index: -1;
     animation: slide 20s infinite;
   }
   @keyframes slide {
     0% {
-        background: url('../public/static/h1.jpg') no-repeat center center/cover;
+        background: url('../public/static/games/Badminton.jpg') no-repeat center center/cover;
     }
     33% {
-        background: url('../public/static/g2.jpg') no-repeat center center/cover;
+        background: url('../public/static/games/Carrom.jpg') no-repeat center center/cover;
     }
     66% {
-        background: url('../public/static/g7.jpg') no-repeat center center/cover;
+        background: url('../public/static/games/Dodgeball.jpg') no-repeat center center/cover;
     }
     100% {
-        background: url('../public/static/h3.jpg') no-repeat center center/cover;
+        background: url('../public/static/games/FootVolley.jpg') no-repeat center center/cover;
     }
   } */
 
@@ -164,6 +164,7 @@ body {
     color: #bbbbbb;
     padding: 20px;
     text-align: center;
+    
   }
   
   @keyframes fadeInDown {
