@@ -58,6 +58,20 @@ function saveToSpreadsheet(data) {
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
+app.get('/download', (req, res) => {
+    const spreadsheetFile = path.join(__dirname, 'team_data.xlsx');
+    if (fs.existsSync(spreadsheetFile)) {
+        res.download(spreadsheetFile, 'team_data.xlsx', (err) => {
+            if (err) {
+                console.error('Error sending file:', err.message);
+                res.status(500).send('Error downloading the file.');
+            }
+        });
+    } else {
+        res.status(404).send('File not found.');
+    }
+});
+
 
 app.post('/register', (req, res) => {
     const {
