@@ -1,54 +1,88 @@
 const express = require('express');
-const path = require('path');
-const fs = require('fs');
-const XLSX = require('xlsx');
 const cors = require('cors');
+const { google } = require('googleapis');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
-
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
-const spreadsheetFile = path.join(__dirname, 'team_data.xlsx');
-if (!fs.existsSync(spreadsheetFile)) {
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, XLSX.utils.aoa_to_sheet([
-        ['Sport', 'Team Name', 'Captain Name', 'Captain Roll No.', 'Captain Email', 'Captain Contact']
-    ]));
-    XLSX.writeFile(workbook, spreadsheetFile);
-}
 
-function getOrCreateSheet(workbook, sport) {
-    let sheet = workbook.Sheets[sport];
-    if (!sheet) {
-        sheet = XLSX.utils.aoa_to_sheet([
-            ['Sport', 'Team Name', 'Captain Name', 'Captain Roll No.', 'Captain Email', 'Captain Contact']
-        ]);
-        XLSX.utils.book_append_sheet(workbook, sheet, sport);
+// Load Google Sheets credentials
+const credentialsPath = path.join(__dirname, 'google-service-account.json');
+const credentials = JSON.parse(fs.readFileSync(credentialsPath, 'utf8'));
+
+const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
+const auth = new google.auth.GoogleAuth({
+    credentials,
+    scopes: SCOPES,
+});
+
+// Replace with your Google Sheet ID
+const spreadsheetId = '1P8GV5XsURYheDH1uz3ba6QCkBFCbwE0l0qarI7xGvQ8'; 
+
+async function getOrCreateSheet(auth, sport) {
+    const sheets = google.sheets({ version: 'v4', auth });
+
+    // Fetch the list of sheets
+    const res = await sheets.spreadsheets.get({ spreadsheetId });
+    const sheetTitles = res.data.sheets.map(sheet => sheet.properties.title);
+
+    // If the sheet for the sport doesn't exist, create it
+    if (!sheetTitles.includes(sport)) {
+        await sheets.spreadsheets.batchUpdate({
+            spreadsheetId,
+            requestBody: {
+                requests: [
+                    {
+                        addSheet: {
+                            properties: {
+                                title: sport,
+                                gridProperties: {
+                                    rowCount: 1000,
+                                    columnCount: 20,
+                                },
+                            },
+                        },
+                    },
+                ],
+            },
+        });
+
+        // Add headers to the new sheet
+        const headerValues = [
+            ['Sport', 'Team Name', 'Captain Name', 'Captain Roll No.', 'Captain Email', 'Captain Contact'],
+        ];
+        await sheets.spreadsheets.values.update({
+            spreadsheetId,
+            range: `${sport}!A1:F1`,
+            valueInputOption: 'RAW',
+            requestBody: { values: headerValues },
+        });
     }
-    return sheet;
+
+    return sport;
 }
 
-function saveToSpreadsheet(data) {
+async function saveToSpreadsheet(data) {
     try {
-        const workbook = XLSX.readFile(spreadsheetFile);
+        const sheets = google.sheets({ version: 'v4', auth });
         const sport = data[0];
-        const sheet = getOrCreateSheet(workbook, sport);
-        const sheetData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-        const memberCount = (data.length - 6) / 2;
-        const headers = sheetData[0];
-        for (let i = 1; i <= memberCount; i++) {
-            if (!headers.includes(`Member ${i} Name`)) {
-                headers.push(`Member ${i} Name`, `Member ${i} Roll No.`);
-            }
-        }
+        // Ensure the sheet exists
+        await getOrCreateSheet(auth, sport);
 
-        sheetData.push(data);
-        const updatedSheet = XLSX.utils.aoa_to_sheet(sheetData);
-        workbook.Sheets[sport] = updatedSheet;
-        XLSX.writeFile(workbook, spreadsheetFile);
+        // Append the row data to the appropriate sheet
+        const range = `${sport}!A1`; // Append to the sport-specific sheet
+        await sheets.spreadsheets.values.append({
+            spreadsheetId,
+            range,
+            valueInputOption: 'RAW',
+            insertDataOption: 'INSERT_ROWS',
+            requestBody: { values: [data] },
+        });
     } catch (err) {
         console.error('Error saving to spreadsheet:', err.message);
         throw new Error('Failed to save data.');
@@ -58,22 +92,8 @@ function saveToSpreadsheet(data) {
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
-app.get('/download', (req, res) => {
-    const spreadsheetFile = path.join(__dirname, 'team_data.xlsx');
-    if (fs.existsSync(spreadsheetFile)) {
-        res.download(spreadsheetFile, 'team_data.xlsx', (err) => {
-            if (err) {
-                console.error('Error sending file:', err.message);
-                res.status(500).send('Error downloading the file.');
-            }
-        });
-    } else {
-        res.status(404).send('File not found.');
-    }
-});
 
-
-app.post('/register', (req, res) => {
+app.post('/register', async (req, res) => {
     const {
         gameselect,
         teamname,
@@ -81,7 +101,7 @@ app.post('/register', (req, res) => {
         teamleaderroll,
         teamleaderemail,
         teamleadercontact,
-        members = [], // Default to an empty array if not provided
+        members = [],
     } = req.body;
 
     // Validate required fields
@@ -103,15 +123,13 @@ app.post('/register', (req, res) => {
     }
 
     try {
-        saveToSpreadsheet(rowData);
+        await saveToSpreadsheet(rowData);
         res.status(200).json({ message: 'Registration successful!' });
     } catch (error) {
         console.error('Error saving data:', error.message);
         res.status(500).json({ error: 'Failed to save data. Please try again later.' });
     }
 });
-
-
 
 app.listen(process.env.PORT || 5000, () => {
     console.log(`The application is running on localhost!`);
