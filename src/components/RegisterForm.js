@@ -76,7 +76,8 @@ const RegisterForm = () => {
   
   
     try {
-      const response = await axios.post('http://localhost:5000/register', finalData);
+      // const response = await axios.post('http://localhost:5000/register', finalData);
+      const response = await axios.post('https://hallabol-25.vercel.app//register', finalData);
       if (response.status === 200) {
         // alert('Registration successful!');
         showAlert('success', 'Registration successful!');
