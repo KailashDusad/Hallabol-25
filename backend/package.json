@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Hallabol 25",
   "main": "server.js",
+  "files": [
+    "server.js",
+    "team_data.xlsx"
+  ],
   "author": "Kailash Dusad",
   "license": "ISC",
   "scripts": {
