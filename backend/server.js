@@ -55,6 +55,9 @@ function saveToSpreadsheet(data) {
     }
 }
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
 
 app.post('/register', (req, res) => {
     const {
