@@ -1,8 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { google } = require('googleapis');
-const fs = require('fs');
-const path = require('path');
+require('dotenv').config();
 
 const app = express();
 
@@ -10,9 +9,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
-// Load Google Sheets credentials
-const credentialsPath = path.join(__dirname, 'google-service-account.json');
-const credentials = JSON.parse(fs.readFileSync(credentialsPath, 'utf8'));
+
+const credentials = {
+    type: process.env.GOOGLE_SERVICE_ACCOUNT_TYPE,
+    project_id: process.env.GOOGLE_SERVICE_ACCOUNT_PROJECT_ID,
+    private_key_id: process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY_ID,
+    private_key: process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    client_email: process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_EMAIL,
+    client_id: process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_ID,
+    auth_uri: process.env.GOOGLE_SERVICE_ACCOUNT_AUTH_URI,
+    token_uri: process.env.GOOGLE_SERVICE_ACCOUNT_TOKEN_URI,
+    auth_provider_x509_cert_url: process.env.GOOGLE_SERVICE_ACCOUNT_AUTH_PROVIDER_X509_CERT_URL,
+    client_x509_cert_url: process.env.GOOGLE_SERVICE_ACCOUNT_CLIENT_X509_CERT_URL,
+    universe_domain: process.env.GOOGLE_SERVICE_ACCOUNT_UNIVERSE_DOMAIN,
+  };
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 const auth = new google.auth.GoogleAuth({
@@ -20,17 +30,14 @@ const auth = new google.auth.GoogleAuth({
     scopes: SCOPES,
 });
 
-// Replace with your Google Sheet ID
 const spreadsheetId = '1P8GV5XsURYheDH1uz3ba6QCkBFCbwE0l0qarI7xGvQ8'; 
 
 async function getOrCreateSheet(auth, sport) {
     const sheets = google.sheets({ version: 'v4', auth });
 
-    // Fetch the list of sheets
     const res = await sheets.spreadsheets.get({ spreadsheetId });
     const sheetTitles = res.data.sheets.map(sheet => sheet.properties.title);
 
-    // If the sheet for the sport doesn't exist, create it
     if (!sheetTitles.includes(sport)) {
         await sheets.spreadsheets.batchUpdate({
             spreadsheetId,
@@ -51,7 +58,6 @@ async function getOrCreateSheet(auth, sport) {
             },
         });
 
-        // Add headers to the new sheet
         const headerValues = [
             ['Sport', 'Team Name', 'Captain Name', 'Captain Roll No.', 'Captain Email', 'Captain Contact'],
         ];
