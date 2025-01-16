@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'; 
+import './styles/Header.css'; 
 
 const Header = () => (
   <nav className="navbar navbar-expand-lg navbar-dark">

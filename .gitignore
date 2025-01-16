@@ -26,3 +26,5 @@ yarn-error.log*
 
 /backend/node_modules
 /backend/google-service-account.json
+
+src/components/.env

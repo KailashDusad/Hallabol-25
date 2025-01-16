@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './RegisterForm.css';
+import './styles/RegisterForm.css';
 import Alert from './Alert';
+
 const RegisterForm = () => {
-  
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     gameselect: '',
     teamname: '',
@@ -64,6 +65,7 @@ const RegisterForm = () => {
       showAlert('warning', 'Please fill all the required fields!');
       return;
     }
+    setLoading(true);
     const formattedMembers = teamMembers.flatMap((member) => [
       member.name,
       member.rollNo,
@@ -76,8 +78,8 @@ const RegisterForm = () => {
   
   
     try {
-      const response = await axios.post('http://localhost:5000/register', finalData);
-      // const response = await axios.post('https://hallabol-25.vercel.app/register', finalData);
+      // const response = await axios.post('http://localhost:5000/register', finalData);
+      const response = await axios.post('https://hallabol-25.vercel.app/register', finalData);
       if (response.status === 200) {
         // alert('Registration successful!');
         showAlert('success', 'Registration successful!');
@@ -95,6 +97,8 @@ const RegisterForm = () => {
     } catch (err) {
       // alert('Error saving data. Please try again later.');
       showAlert('error', 'Error saving data. Please try again later.');
+    } finally {
+      setLoading(false);
     }
   };
   
@@ -177,8 +181,16 @@ const RegisterForm = () => {
             </div>
           ))}
         </div>
-
-        <button type="submit" className="btn btn-primary">Submit</button>
+        {loading ? (
+          <>
+          <div className="spinner-border" style={{color:'#ff7f50'}} role="status">
+            <span className="sr-only" ></span>
+          </div>
+          </>
+        ) : (
+          <button type="submit" className="btn btn-primary">Submit</button>
+        )}
+        {/* <button type="submit" className="btn btn-primary">Submit</button> */}
       </form>
     </div>
   );

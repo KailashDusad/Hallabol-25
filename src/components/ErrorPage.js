@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './error.css';
+import './styles/error.css';
 
 const ErrorPage = () => {
   const location = useLocation();

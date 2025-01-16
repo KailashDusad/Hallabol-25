@@ -1,10 +1,9 @@
 import React from 'react';
 import manmohan from './manmohan.jpg'; 
-import './Team.css';
+import './styles/Team.css';
 
 const teamData = [
     { name: 'Dawood 💣', role: 'Incharge', image: manmohan },
-    { name: 'John Doe', role: 'Coordinator', image: manmohan },
   ];
   
   const Team = () => (

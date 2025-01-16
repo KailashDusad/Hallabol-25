@@ -9,9 +9,9 @@ const Home = () => (
     zIndex: -10, opacity: 0.8, position: 'absolute', top: '-15%',
     left: 0, width: '100%', height: '93vh'
     }}>
-    {/* <video autoPlay muted loop>
+    <video autoPlay muted loop>
       <source src="/static/video.mp4" type="video/mp4" />
-    </video> */}
+    </video>
     </div>
     <div style={{
     display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
