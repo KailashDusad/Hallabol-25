@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import './Rules.css'
 
 const TugOfWar = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className='main-container'>
             <Helmet>
@@ -94,7 +97,7 @@ its registration will be terminated.</li>
                                 </li>
                             </ul>
                 <div className="register-button">
-                    <Link to="/register">Register Now</Link>
+                    <Link to="/register?game=Tug of war">Register Now</Link>
 
                 </div>
 

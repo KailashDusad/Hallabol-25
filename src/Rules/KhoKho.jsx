@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import './Rules.css'
 
 const KhoKho = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
   return (
     <div className='main-container'>
         <Helmet>
@@ -133,7 +136,7 @@ running (being chased)) for the first 2 rounds of the tournament and 10 minutes 
                                 </li>
                             </ul>
                 <div className="register-button">
-                <Link to="/register">Register Now</Link>
+                <Link to="/register?game=Kho-Kho">Register Now</Link>
 
                 </div>
 

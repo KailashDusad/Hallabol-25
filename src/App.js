@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -21,18 +21,16 @@ import GullyCricket from './Rules/GullyCricket';
 import SevenStones from './Rules/SevenStones';
 import KhoKho from './Rules/KhoKho';
 import Throwball from './Rules/Throwball';
-import Chess from './Rules/chess';
+import Chess from './Rules/Chess';
 import TugOfWar from './Rules/TugOfWar';
 
 const App = () => {
-  // const [selectedGame, setSelectedGame] = useState('');
 
   return (
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/games" element={<Games setSelectedGame={setSelectedGame} />} /> */}
         <Route path="/games" element={<Games />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/team" element={<Team />} />
@@ -51,6 +49,7 @@ const App = () => {
         <Route path="/rules/Throwball" element={<Throwball />} />
         <Route path="/rules/Chess" element={<Chess />} />
         <Route path="/rules/TugOfWar" element={<TugOfWar />} />
+
 
       </Routes>
       <Footer />

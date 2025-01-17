@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './styles/RegisterForm.css';
 import Alert from './Alert';
+import { useLocation } from 'react-router-dom';
 
 const RegisterForm = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
   const [loading, setLoading] = useState(false);
+  const [selectedGameRule, setSelectedGameRule] = useState('');
+  const location = useLocation();
   const [formData, setFormData] = useState({
     gameselect: '',
     teamname: '',
@@ -15,6 +21,7 @@ const RegisterForm = () => {
     members: [],
   });
 
+  
   const gameMapping = {
     "Gully Cricket": 6,
     "Kho-Kho": 8,
@@ -22,12 +29,12 @@ const RegisterForm = () => {
     "Tug of war": 6,
     "Foot-voley": 6,
     "4-a-side-baddy": 4,
-    "seven stone": 6,
-    "freesbe": 7,
-    "throw ball": 6,
-    "carrom": 4,
-    "dodge ball": 6,
-    "chess": 2
+    "Seven Stone": 6,
+    "Freesbe": 7,
+    "Throw Ball": 6,
+    "Carrom": 4,
+    "Dodge Ball": 6,
+    "Chess": 2
   };
 
   const [teamMembers, setTeamMembers] = useState([]);
@@ -101,6 +108,26 @@ const RegisterForm = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const game = params.get('game');
+    console.log('Game from URL:', game);
+    if (game) {
+        setSelectedGameRule(game);
+        setFormData(prevFormData => ({ ...prevFormData, gameselect: game }));
+        const playerCount = gameMapping[game] || 0;
+        console.log('Player count:', playerCount);
+        const newMembers = Array.from({ length: playerCount - 1 }, (_, index) => ({
+          name: '',
+          rollNo: '',
+          id: index + 2,
+        }));
+        console.log('New team members:', newMembers);
+        setTeamMembers(newMembers);
+    }
+}, [location]);
+
   
 
   return (

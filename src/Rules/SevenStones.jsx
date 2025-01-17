@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import './Rules.css'
 
 const SevenStones = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className='main-container'>
             <Helmet>
@@ -73,7 +76,7 @@ const SevenStones = () => {
                                 </li>
                             </ul>
                 <div className="register-button">
-                    <Link to="/register">Register Now</Link>
+                    <Link to="/register?game=Seven Stone">Register Now</Link>
 
                 </div>
 
