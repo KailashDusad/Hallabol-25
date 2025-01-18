@@ -55,11 +55,8 @@ const Chess = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Coordi1 | Mob1
+                                Animesh Sharma | Mob1
                              </li>
-                                <li>
-                                Coordi2  | Mob2
-                                </li>
                             </ul>
                 <div className="register-button">
                     <Link to="/register?game=Chess">Register Now</Link>

@@ -69,10 +69,10 @@ const SevenStones = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Coordi1 | Mob1
+                                Dhruv shah | Mob1
                              </li>
                                 <li>
-                                Coordi2  | Mob2
+                                Tamanna Meena  | Mob2
                                 </li>
                             </ul>
                 <div className="register-button">

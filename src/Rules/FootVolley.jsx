@@ -105,10 +105,10 @@ const FootVolley = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Coordi1 | Mob1
+                                Anjana S A  | Mob1
                              </li>
                                 <li>
-                                Coordi2  | Mob2
+                                Vishal  | Mob2
                                 </li>
                             </ul>
                 <div className="register-button">

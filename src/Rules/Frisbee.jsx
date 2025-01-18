@@ -74,10 +74,10 @@ const Frisbee = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Coordi1 | Mob1
+                                Shivam Sudhakar Chavan | Mob1
                              </li>
                                 <li>
-                                Coordi2  | Mob2
+                                    Aditya Mehta  | Mob2
                                 </li>
                             </ul>
                 <div className="register-button">

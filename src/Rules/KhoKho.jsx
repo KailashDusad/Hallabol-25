@@ -129,10 +129,10 @@ running (being chased)) for the first 2 rounds of the tournament and 10 minutes 
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Coordi1 | Mob1
+                                Mahesh Dharavath | Mob1
                              </li>
                                 <li>
-                                Coordi2  | Mob2
+                                Khomendra Sahu  | Mob2
                                 </li>
                             </ul>
                 <div className="register-button">

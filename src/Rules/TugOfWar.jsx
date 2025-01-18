@@ -90,10 +90,10 @@ its registration will be terminated.</li>
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Coordi1 | Mob1
+                                Kshitij Suresh Giri | Mob1
                              </li>
                                 <li>
-                                Coordi2  | Mob2
+                                Abhitej Singh Bhullar  | Mob2
                                 </li>
                             </ul>
                 <div className="register-button">

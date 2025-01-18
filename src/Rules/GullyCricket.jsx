@@ -65,10 +65,13 @@ const GullyCricket = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Coordi1 | Mob1
+                                Arpit Sigotiya | Mob1
                              </li>
                                 <li>
-                                Coordi2  | Mob2
+                                Dhairya Shah | Mob2
+                                </li>
+                                <li>
+                                Rathod Nitesh | Mob2
                                 </li>
                             </ul>
                 <div className="register-button">

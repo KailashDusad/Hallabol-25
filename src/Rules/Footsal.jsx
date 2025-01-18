@@ -100,10 +100,13 @@ const Footsal = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Coordi1 | Mob1
+                                Lobsang Kom | Mob1
                              </li>
                                 <li>
-                                Coordi2  | Mob2
+                                Hriday Pandya | Mob2
+                                </li>
+                                <li>                  
+                                Manas Arasada | Mob3
                                 </li>
                             </ul>
                 <div className="register-button">

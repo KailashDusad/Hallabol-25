@@ -62,10 +62,10 @@ const Badminton = () => {
                             </div>
                             <ul className='guidlines'>
                                 <li>
-                                Coordi1 | Mob1
+                                Banavath Diraj Naik | Mob1
                              </li>
                                 <li>
-                                Coordi2  | Mob2
+                                    Chinthala Shivamani  | Mob2
                                 </li>
                             </ul>
                             <div className="register-button">

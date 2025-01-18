@@ -15,7 +15,6 @@ body {
   .hero {
     position: relative;
     height: 93vh;
-    background: linear-gradient(135deg, rgba(30, 30, 30, 0.5), rgba(42, 42, 42, 0.5));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,57 +23,63 @@ body {
     color: white;
     padding: 20px;
     overflow: hidden;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.5), rgba(42, 42, 42, 0.5));
   }
+  
+  .hero-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .hero-images img {
+    max-width: 45%; 
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .hero-images img:hover {
+    transform: scale(1.05); 
+  }
+  
+  @media (max-width: 750px) {
+    .hero{
+      height: 80vh;
+    }
+    .hero-images {
+      flex-direction: column; 
+      align-items: center;
+      gap: 0; 
+    }
+  
+    #play {
+      display: none;
+    }
+  
+    #halla {
+      max-width: 100%;
+      height: auto;
+      opacity: 0.4;
+    }
 
-  /* --- Alter --- */
   
-  /* .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../public/static/games/Badminton.jpg') no-repeat center center/cover;
-    z-index: -1;
-    animation: slide 20s infinite;
-  }
-  @keyframes slide {
-    0% {
-        background: url('../public/static/games/Badminton.jpg') no-repeat center center/cover;
+    
+    #play {
+      display: block;
+      position: absolute;
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%);
+      max-width: 80%; 
+      opacity: 1;
     }
-    33% {
-        background: url('../public/static/games/Carrom.jpg') no-repeat center center/cover;
-    }
-    66% {
-        background: url('../public/static/games/Dodgeball.jpg') no-repeat center center/cover;
-    }
-    100% {
-        background: url('../public/static/games/FootVolley.jpg') no-repeat center center/cover;
-    }
-  } */
-
-  /* ---- */
-  
-  .hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    animation: fadeInDown 1.5s ease;
+    
+   
   }
-  
-  .hero p {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    animation: fadeInUp 1.5s ease;
-  }
-  
-  #play {
-    animation: fadeInDown 2s ease;
-    opacity: 1;
-    width:100%;
-  }
-  
-  
   .hero .btn {
     background: linear-gradient(to right, #ff7f50, #ff3e75);
     color: white;
@@ -82,15 +87,6 @@ body {
     padding: 15px 30px;
     font-size: 1.2rem;
     margin-top: 40px;
-    animation: fadeIn 2s ease;
-  }
-  .p-3 .btn {
-    background: linear-gradient(to right, #ff7f50, #ff3e75);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    margin-top: 10px;
     animation: fadeIn 2s ease;
   }
   
@@ -114,18 +110,17 @@ body {
     background: rgba(255, 255, 255, 0.3);
   }
   
-  .hero-scroll {
-    position: absolute;
-    bottom: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: bounce 2s infinite;
+
+  .p-3 .btn {
+    background: linear-gradient(to right, #ff7f50, #ff3e75);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeIn 2s ease;
   }
   
-  .hero-scroll img {
-    width: 30px;
-    height: auto;
-  }
   
   .game-section {
     background-color: #1f1f1f;
