@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles/Header.css'; 
+import Halla from '../static/halla.png';
 
 const Header = () => (
   <nav className="navbar navbar-expand-lg navbar-dark">
     <div className="container-fluid">
       <div className="d-flex align-items-center">
-        <img src="/static/halla.png" alt="Hallabol Logo" width="40" className="me-2" />
+        <img src={Halla} alt="Hallabol Logo" width="40" className="me-2" />
         <NavLink className="navbar-brand" to="/" exact>Hallabol</NavLink>
       </div>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

@@ -5,11 +5,6 @@ import './styles/Team.css';
 const teamData = [
     { name: 'Dawood 💣', role: 'Convenor', image: manmohan },
     { name: 'Dawood 💣', role: 'Core Member', image: manmohan },
-    { name: 'Dawood 💣', role: 'Core', image: manmohan },
-    { name: 'Dawood 💣', role: 'Core', image: manmohan },
-    { name: 'Dawood 💣', role: 'Core', image: manmohan },
-    { name: 'Dawood 💣', role: 'Core', image: manmohan },
-    { name: 'Dawood 💣', role: 'Core', image: manmohan },
 ];
 
 const Team = () => (

@@ -10,8 +10,8 @@ const Table = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/points'); 
-                // const response = await fetch('https://hallabol-25.vercel.app/points'); 
+                // const response = await fetch('http://localhost:5000/points'); 
+                const response = await fetch('https://hallabol-25.vercel.app/points'); 
                 if (!response.ok) {
                     throw new Error('Failed to fetch points data.');
                 }
