@@ -28,3 +28,4 @@ yarn-error.log*
 /backend/google-service-account.json
 
 src/components/.env
+build.zip
