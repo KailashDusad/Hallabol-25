@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import './Rules.css'
 
@@ -9,9 +8,6 @@ const GullyCricket = () => {
     }, []);
     return (
         <div className='main-container'>
-            <Helmet>
-                <title>Gully-Cricket</title>
-            </Helmet>
             <div className="games-section">
                 <div className="sports-heading">
                     <h1>Gully-Cricket</h1>
@@ -20,8 +16,60 @@ const GullyCricket = () => {
                     <h2>Pool Players: </h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Pool Players...</li>
+                    <li>Jatin Nama,
+Sakib Ahmed Dar,
+Bhushan Kape,
+Dhairya Shah,
+Hansin Shah,
+Ayush Abhi,
+Faizan Bhatt,
+Raushan Thakur,
+Ankit Kumar,
+Aditya Jain,
+Arpit Sigotiya,
+Digvijay Singh Parihar,
+Bhavesh Joshi,
+Namesh Nishad,
+Nitesh Nayak,
+Nitesh Rathod
+</li>
+                
                 </ul>
+
+                <div className="sports-item-heading">
+                    <h2>Other Pool Players: </h2>
+                </div>
+                <ul className='guidlines'>
+                    <li>
+                    Aaqib Khan,
+Aman Singh,
+Jaideep Singh Barad,
+Abhinav Singh Yadav,
+Pushkar Parakh,
+Hiteshi Meisheri
+
+                        </li>
+                </ul>
+                
+                <div className="sports-item-heading">
+                    <h2>Staff Pool Players: </h2>
+                </div>
+                <ul className='guidlines'>
+                    <li>
+                    Ratnesh Singh,
+Abhijit Mishra,
+Madhu Vadali,
+Santosh Raut,
+Santosh Joshi,
+Rohit Chaudhary,
+Rajib Kumar Das,
+Sachin Patel,
+Naran Pindoriya,
+Babloo Sharma
+
+                    </li>
+                    </ul>
+
                 <div className="sports-item-heading">
                     <h2>Team Formation Rules:</h2>
                 </div>

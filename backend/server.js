@@ -137,6 +137,53 @@ app.post('/register', async (req, res) => {
     }
 });
 
+app.get('/points', async (req, res) => {
+    const spreadsheetId = '1Cj7zeXhE1Sh9eyzpHgZHZ9-5jJ0iPLjZZuLOGGwuJTA';
+
+    try {
+        const sheets = google.sheets({ version: 'v4', auth });
+
+        // Get all sheet names in the spreadsheet
+        const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
+        const sheetTitles = spreadsheet.data.sheets.map(sheet => sheet.properties.title);
+
+        const allData = {};
+
+        // Fetch data from each sheet
+        for (const title of sheetTitles) {
+            const range = `${title}!A1:C`; // Adjust the range to fit your sheet structure
+
+            const response = await sheets.spreadsheets.values.get({
+                spreadsheetId,
+                range,
+            });
+
+            if (response.data.values) {
+                const headers = response.data.values[0];
+                const rows = response.data.values.slice(1);
+
+                const jsonData = rows.map((row) => {
+                    const rowData = {};
+                    headers.forEach((header, index) => {
+                        rowData[header] = row[index] || ''; // Handle missing values gracefully
+                    });
+                    return rowData;
+                });
+
+                allData[title] = jsonData;
+            } else {
+                allData[title] = []; // Handle empty sheets
+            }
+        }
+
+        res.json(allData);
+    } catch (error) {
+        console.error('Error fetching points data:', error.message);
+        res.status(500).json({ error: 'Failed to fetch points data.' });
+    }
+});
+
+
 app.listen(process.env.PORT || 5000, () => {
     console.log(`The application is running on localhost!`);
 });

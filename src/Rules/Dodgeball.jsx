@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import './Rules.css'
 
@@ -9,9 +8,6 @@ const Dodgeball = () => {
     }, []);
     return (
         <div className='main-container'>
-            <Helmet>
-                <title>Dodgeball</title>
-            </Helmet>
             <div className="games-section">
                 <div className="sports-heading">
                     <h1>Dodgeball</h1>

@@ -1,33 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import * as XLSX from 'xlsx';
 import './styles/Table.css';
+import Loader from './Loader';
 
 const Table = () => {
     const [data, setData] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('/static/Points.xlsx');
-                const arrayBuffer = await response.arrayBuffer();
-                const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-                let combinedData = {};
-
-                workbook.SheetNames.forEach(sheetName => {
-                    const worksheet = workbook.Sheets[sheetName];
-                    const jsonData = XLSX.utils.sheet_to_json(worksheet);
-                    combinedData[sheetName] = jsonData;
-                });
-
-                setData(combinedData);
+                const response = await fetch('http://localhost:5000/points'); 
+                // const response = await fetch('https://hallabol-25.vercel.app/points'); 
+                if (!response.ok) {
+                    throw new Error('Failed to fetch points data.');
+                }
+                const result = await response.json();
+                setData(result);
+                setLoading(false);
             } catch (error) {
-                console.error('Error fetching or parsing the Excel file:', error);
+                setError(error.message);
+                setLoading(false);
             }
         };
 
         fetchData();
     }, []);
-    if (Object.keys(data).length === 0) {
+
+    if (loading) {
+        return <Loader />;
+    }
+
+    if (error) {
+        // return <div className="error">{error}</div>;
+        return (
+            <section className="team-section">
+                <h1> {error} </h1>
+            </section>
+        );
+        
+    }
+
+    if (!Object.keys(data).length) {
         return (
             <section className="team-section">
                 <h1>Will be updated soon...</h1>
@@ -37,23 +51,25 @@ const Table = () => {
 
     return (
         <div className="container">
-            {Object.keys(data).map((game, index) => (
-                <div key={index}>
-                    <h2>{game}</h2>
+            <h2>Points Table</h2>
+            {Object.keys(data).map((sheetName) => (
+                <div key={sheetName}>
+                    <h3>{sheetName}</h3>
                     <table>
                         <thead>
                             <tr>
-                                <th>Team 1</th>
-                                <th>Team 2</th>
-                                <th>Winner</th>
+                                {data[sheetName].length > 0 &&
+                                    Object.keys(data[sheetName][0]).map((header, index) => (
+                                        <th key={index}>{header}</th>
+                                    ))}
                             </tr>
                         </thead>
                         <tbody>
-                            {data[game].map((row, rowIndex) => (
+                            {data[sheetName].map((row, rowIndex) => (
                                 <tr key={rowIndex}>
-                                <td data-label="Team 1">{row.Team1}</td>
-                                <td data-label="Team 2">{row.Team2}</td>
-                                <td data-label="Winner">{row.Winner}</td>
+                                    {Object.values(row).map((cell, cellIndex) => (
+                                        <td key={cellIndex}>{cell}</td>
+                                    ))}
                                 </tr>
                             ))}
                         </tbody>

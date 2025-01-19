@@ -1,76 +1,99 @@
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #121212;
-  color: white;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-nav {
-  background-color: #1f1f1f;
-}
-
 .team-section {
   padding: 50px 20px;
   text-align: center;
+  /* background: linear-gradient(135deg, rgba(30, 30, 30, 1), rgba(42, 42, 42, 1)); */
 }
 
 .team-section h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #ff7f50;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   animation: fadeInDown 1s ease;
 }
 
 .team-cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  margin-left: 60px;
+  margin-right: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 100px;
   justify-content: center;
-  gap: 20px;
 }
 
 .team-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 300px;
+  background: none;
   text-align: center;
 }
 
-.team-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+.team-card-image {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 3px solid #ff7f50; 
+  overflow: hidden;
+  margin: 0 auto 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.team-card img {
+.team-card-image img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.team-card h3 {
-  font-size: 1.5rem;
+.team-card-image:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 20px rgba(255, 127, 80, 0.7); 
+  border-color: #ff3e75;
+}
+
+.team-card-content h3 {
+  font-size: 1.4rem;
   font-weight: bold;
-  margin: 15px 0 5px;
+  color: #ffffff;
+  margin-bottom: 5px;
 }
 
-.team-card p {
+.team-card-content p {
   font-size: 1rem;
   color: #bbbbbb;
+  margin: 0;
 }
 
 @keyframes fadeInDown {
   from {
-      opacity: 0;
-      transform: translateY(-50px);
+    opacity: 0;
+    transform: translateY(-50px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section h1 {
+    font-size: 2rem;
+  }
+
+  .team-card-image {
+    width: 170px; 
+    height: 170px;
+
+  }
+
+  .team-card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .team-card-content p {
+    font-size: 0.9rem;
+  }
+  .team-cards {
+    gap: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

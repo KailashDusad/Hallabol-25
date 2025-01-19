@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import './Rules.css'
 
@@ -9,13 +8,16 @@ const TugOfWar = () => {
     }, []);
     return (
         <div className='main-container'>
-            <Helmet>
-                <title>Tug of War</title>
-            </Helmet>
             <div className="games-section">
                 <div className="sports-heading">
                     <h1>Tug of War</h1>
                 </div>
+                <div className="sports-item-heading">
+                    <h2>Pool Players: </h2>
+                </div>
+                <ul className='guidlines'>
+                    <li>Amartya Tuljapurkar, Hemant Poonia, Rahul Ahirwar, Tushar Chahal, Praveen Bishnoi, Lovekesh Mahale, Ritesh kumar, Manmohan Singh, Srimaan Govindu, Saurabh Kumar</li>
+                </ul>
                 <div className="sports-item-heading">
                     <h2>Team Formation Rules:</h2>
                 </div>

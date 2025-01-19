@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import './Rules.css'
 
@@ -9,9 +8,6 @@ const Footsal = () => {
     }, []);
     return (
         <div className='main-container'>
-            <Helmet>
-                <title>Futsal</title>
-            </Helmet>
             <div className="games-section">
                 <div className="sports-heading">
                     <h1>Futsal</h1>
@@ -88,7 +84,8 @@ const Footsal = () => {
                     <h2>Pool Players:</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Pool Players...</li>
+                    <li>Lobsang Kom, Kushal Rathod, Akash KP, Evan Keinz Joy, Swayam Koregave, Aayush More, Adwaith P, Anurag Vishal, Aflah, Prajas Kulkarni, Anshu Kale, Sumedh Wankhede, Jagroop Singh, Aboobacker, Vaibhav, Nirmay, Shernik, Aslam, Keshav.</li>
+                    <li><span style={{color:"#F00"}}>*Note:</span> Any alumni who have previously been pool players will be considered pool players for this edition as well.</li>
 
 
 
