@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Cric from '../static/games/GullyCricket.jpeg'
-import KhoKho from '../static/games/KhoKho.jpeg'
-import Futsal from '../static/games/Futsal.jpg'
-import Tug from '../static/games/TugOfWar.jpg'
-import FootV from '../static/games/FootVolley.jpg'
-import BadM from '../static/games/Badminton.jpg'
-import Saven from '../static/games/SevenStones.jpg'
-import Frisbee from '../static/games/UltimateFrisbee.jpg'
-import Throwball from '../static/games/Throwball.jpg'
-import Carrom from '../static/games/Carrom.jpg'
-import Dodge from '../static/games/Dodgeball.jpg'
-import Chess from '../static/games/Chess.jpg'
+import Cric from '../static/GullyCricket.jpeg'
+import KhoKho from '../static/KhoKho.jpeg'
+import Futsal from '../static/Futsal.jpg'
+import Tug from '../static/TugOfWar.jpg'
+import FootV from '../static/FootVolley.jpg'
+import BadM from '../static/Badminton.jpg'
+import Saven from '../static/SevenStones.jpg'
+import Frisbee from '../static/UltimateFrisbee.jpg'
+import Throwball from '../static/Throwball.jpg'
+import Carrom from '../static/Carrom.jpg'
+import Dodge from '../static/Dodgeball.jpg'
+import Chess from '../static/Chess.jpg'
 
 
 const Games = () => (
