@@ -8,7 +8,6 @@ import RegisterForm from './components/RegisterForm';
 import Team from './components/Team';
 import Table from './components/Table';
 import ErrorPage from './components/ErrorPage';
-// import Rules from './components/Rules';
 import './styles.css';
 
 import Footsal from './Rules/Footsal';
@@ -25,9 +24,8 @@ import Chess from './Rules/Chess';
 import TugOfWar from './Rules/TugOfWar';
 
 const App = () => {
-
   return (
-    <Router>
+    <Router basename="/hallabol-25">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -36,7 +34,6 @@ const App = () => {
         <Route path="/team" element={<Team />} />
         <Route path="/table" element={<Table />} />
         <Route path="/error" element={<ErrorPage />} />
-        {/* <Route path="/rules/:gameName" element={<Rules />} /> */}
         <Route path="/rules/Footsal" element={<Footsal />} />
         <Route path="/rules/Badminton" element={<Badminton />} />
         <Route path="/rules/Carrom" element={<Carrom />} />
@@ -49,8 +46,6 @@ const App = () => {
         <Route path="/rules/Throwball" element={<Throwball />} />
         <Route path="/rules/Chess" element={<Chess />} />
         <Route path="/rules/TugOfWar" element={<TugOfWar />} />
-
-
       </Routes>
       <Footer />
     </Router>
