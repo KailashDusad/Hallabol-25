@@ -97,13 +97,13 @@ const Footsal = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Lobsang Kom | Mob1
+                                Lobsang Kom | 9774342155
                              </li>
                                 <li>
-                                Hriday Pandya | Mob2
+                                Hriday Pandya | 9512061845
                                 </li>
                                 <li>                  
-                                Manas Arasada | Mob3
+                                Manas Arasada | 6360665240
                                 </li>
                             </ul>
                 <div className="register-button">

@@ -66,10 +66,10 @@ const Dodgeball = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Dhruv jalan | Mob1
+                                Dhruv jalan | 9820616210
                              </li>
                                 <li>                
-                                    Ayush umare  | Mob2
+                                    Ayush umare  | 7820975758
                                 </li>
                             </ul>
                 <div className="register-button">

@@ -159,7 +159,7 @@ const Carrom = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Animesh Sharma | Mob1
+                                Animesh Sharma | +91 9691330551
                              </li>
                             </ul>
                 <div className="register-button">

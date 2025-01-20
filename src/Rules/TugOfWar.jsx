@@ -92,10 +92,10 @@ its registration will be terminated.</li>
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Kshitij Suresh Giri | Mob1
+                                Kshitij Suresh Giri | 7990614365
                              </li>
                                 <li>
-                                Abhitej Singh Bhullar  | Mob2
+                                Abhitej Singh Bhullar  | 6280120714
                                 </li>
                             </ul>
                 <div className="register-button">

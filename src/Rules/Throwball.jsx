@@ -62,10 +62,10 @@ const Throwball = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Priyanka | Mob1
+                                Priyanka | 7665151733 
                              </li>
                                 <li>
-                                Swati | Mob2
+                                Swati | 9406633187
                                 </li>
                             </ul>
                 <div className="register-button">

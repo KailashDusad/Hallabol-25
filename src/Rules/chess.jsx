@@ -39,7 +39,10 @@ const Chess = () => {
                     <h2>Pool Players:</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>All the Pool Players Name...</li>
+                    <li>Soham Pathak, Nishant Tomar, Animesh Sharma, Akash Gupta, Neev Patel, Abhishek
+Sahasranshu, Devvrat Hans, Kshitij Kasodkar, Abhishek Tagalpallewar, Arindam Mitra, Pragya
+Arora, Sameer Verma, Tarun Hooda, Ashmit Chhoker, Suraj Borate, Chaman Modi, Chaitanya
+Chaudhary</li>
 
 
 
@@ -51,7 +54,7 @@ const Chess = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Animesh Sharma | Mob1
+                                Animesh Sharma | +91 9691330551
                              </li>
                             </ul>
                 <div className="register-button">

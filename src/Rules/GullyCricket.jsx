@@ -113,13 +113,13 @@ Babloo Sharma
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Arpit Sigotiya | Mob1
+                                Arpit Sigotiya | 8349831281
                              </li>
                                 <li>
-                                Dhairya Shah | Mob2
+                                Dhairya Shah | 6353367509
                                 </li>
                                 <li>
-                                Rathod Nitesh | Mob2
+                                Rathod Nitesh
                                 </li>
                             </ul>
                 <div className="register-button">

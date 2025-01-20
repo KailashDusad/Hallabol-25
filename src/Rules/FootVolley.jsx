@@ -27,7 +27,18 @@ const FootVolley = () => {
                     <h2>Pool Players:</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Pool Players...</li>
+                    <li>Swati Rawat, 
+Manasvi Choudhary, 
+Vishva Parmar,
+Pinki saini, 
+Priyanka, 
+Anshika, 
+Ananya Pawar,
+Anjana S A, 
+Sejal Sharbidre,
+Nidhi Kumari, 
+Ayushi Meena,
+Keshar Lahare</li>
 
 
 
@@ -101,10 +112,10 @@ const FootVolley = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Anjana S A  | Mob1
+                                Anjana S A  | 9074936379
                              </li>
                                 <li>
-                                Vishal  | Mob2
+                                Vishal  | 7874640284
                                 </li>
                             </ul>
                 <div className="register-button">

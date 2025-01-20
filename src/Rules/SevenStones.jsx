@@ -65,10 +65,10 @@ const SevenStones = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Dhruv shah | Mob1
+                                Dhruv shah | 8849571993
                              </li>
                                 <li>
-                                Tamanna Meena  | Mob2
+                                Tamanna Meena  | 8302029407
                                 </li>
                             </ul>
                 <div className="register-button">
