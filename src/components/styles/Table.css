@@ -55,41 +55,38 @@ body {
     font-size: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
-  }
-  
-  tbody tr:last-child td {
+}
+
+tbody tr:last-child td {
     border-bottom: none;
-  }
-  
-  @media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        display: block;
     }
-  
-    thead {
-      display: none;
+
+    thead, tbody {
+        display: block;
+        width: 100%;
     }
-  
-    tr {
-      margin-bottom: 15px;
-      background: #2b2b2b;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
+    thead th, tbody td {
+        white-space: nowrap;
     }
-  
-    td {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
+
+    tbody tr {
+        display: flex;
+        width: 100%;
     }
-  
-    td::before {
-      content: attr(data-label);
-      flex-basis: 50%;
-      color: #ff7f50;
-      font-weight: 700;
-      text-transform: uppercase;
+
+    thead tr {
+        display: flex;
+        width: 100%;
     }
-  }
-  
+
+    thead th, tbody td {
+        flex: 1;
+    }
+}
