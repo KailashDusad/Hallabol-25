@@ -33,7 +33,7 @@ const Frisbee = () => {
                     <h2>Game Rules:</h2>
                 </div>
                 <ul className='guidlines'>
-
+                    <li>If female player is absent and if the opposite team agrees, match can still be played with score starting from 1 0.</li>
                     <li>A disc toss decides which team starts the game in the offence or defense and the other team picks the endzone side.</li>
                     <li>Players from both teams must take their positions on the respective end zones.</li>
                     <li>At the start of the game, the defense takes possession of the Frisbee.</li>

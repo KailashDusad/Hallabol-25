@@ -27,11 +27,11 @@ const Games = () => (
           { img: FootV, title: 'Foot Volley', desc: 'Volleyball with a twist.', id:'FootVolley'},
           { img: BadM, title: '4-a-side Baddy', desc: 'Fast-paced badminton action.', id:'Badminton'},
           { img: Saven, title: 'Seven Stone', desc: 'A game of skill and precision.', id:'SevenStones'},
-          { img: Frisbee, title: 'Freesbe', desc: 'Frisbee with a competitive edge.', id:'Frisbee'},
+          { img: Frisbee, title: 'Frisbee', desc: 'Frisbee with a competitive edge.', id:'Frisbee'},
           { img: Throwball, title: 'Throw Ball', desc: 'A game of skill and strategy.' , id:'Throwball'},
           { img: Carrom, title: 'Carrom', desc: 'A game of skill and precision.', id:'Carrom'},
           { img: Dodge, title: 'Dodge Ball', desc: 'Dodge, duck, dip, dive and dodge.', id:'Dodgeball'},
-          { img: Chess, title: 'Chess', desc: 'The ultimate test of strategy.', id:'Chess'},
+          { img: Chess, title: 'TriUnity Chess', desc: 'The ultimate test of strategy.', id:'Chess'},
         ].map((game, index) => (
           <div key={index} className="col-md-4 mb-4">
             <div className="game-card">

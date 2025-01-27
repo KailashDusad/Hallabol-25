@@ -22,6 +22,7 @@ import KhoKho from './Rules/KhoKho';
 import Throwball from './Rules/Throwball';
 import Chess from './Rules/Chess';
 import TugOfWar from './Rules/TugOfWar';
+import Ended from './components/Ended';
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/games" element={<Games />} />
-        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/register" element={<Ended />} />
         <Route path="/team" element={<Team />} />
         <Route path="/table" element={<Table />} />
         <Route path="/error" element={<ErrorPage />} />

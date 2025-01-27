@@ -3,7 +3,7 @@ import './styles/Team.css';
 import Kushal from '../Team/Kushal.jpg';
 import Adit from '../Team/Adit.jpg';
 import Anurag from '../Team/Anurag.jpg';
-import Rohit from '../Team/Rohit.png';
+import Rohit from '../Team/Ro1.png';
 import Sobania from '../Team/Sobania.jpg';
 import kd from '../Team/kd1.jpg';
 import om from '../Team/om.jpg';

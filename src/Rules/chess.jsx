@@ -16,72 +16,48 @@ const Chess = () => {
                     <h2>Rules:</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Each team consists of three players. The team can include any combination of male, female, and marquee players. The only exception is NO two marquee players can be present in one team
+                    <li>Each team consists of three players. Teams may include any combination of male and female players. A team cannot include more than one marquee player.</li>
+                    <li>A single substitute is permitted but must be registered in advance, if applicable.</li>
+                    <li>Players within a team must take turns making moves. The order of play must be decided and submitted before the start of the game and cannot be altered once the game begins.</li>
+                    <li>The standard time control is 5 minutes per side with a 5-second increment per move (5+5). If a female player is on the team, the time control becomes 7+5. If a marquee player is on the team, the time control becomes 4+5.</li>
+                    <li>Players are responsible for managing their own time. The clock starts when the first player makes their move.</li>
+                    <li>If a player makes an illegal move:
+                        <ul>
+                            <li>First illegal move: A warning is issued to the team.</li>
+                            <li>Second illegal move: One additional minute is added to the opposing team’s clock.</li>
+                            <li>Third illegal move: The team forfeits the game.</li>
+                        </ul>
                     </li>
-                    <li>Players on the same team take turns making moves. The order of play is decided by the team and cannot change during the game, the order should be given before the game starts.</li>
-                    <li>The standard time format is 5 minutes per side with an additional 5 seconds increment per move (5+5). If any female player is included in the team, the time format becomes 7+5 for that side. If a marquee player is included, the time format is 4+5 for that side.</li>
-                    <li>Players are responsible for managing their own time. The clock starts when a player makes their move. </li>
-                    <li>If a player makes an illegal move, one warning will be given and on the second illegal move,if the move is not forced, their team loses the right to make the next move, and the opposing team gains an additional move. Third illegal moves will make the team lose.</li>
-                    <li>Players are not allowed to consult by any means with their teammates once the game starts. Only the current player can physically make the move on the board.</li>
-                    <li>Players must adhere to the agreed-upon order of play. Deviating from the order without mutual consent may result in penalties.</li>
-
-                    <li> No time bonus is given considering the time increment. The team loses once the time ends. 
-                    </li>
-                    <li>A warning is issued when a team is approaching the final minute of their total time. Continuous violations may result in time penalties.</li>
-                    <li>                    
-                        <li>A warning is issued when a team is approaching the final minute of their total time. Continuous violations may result in time penalties.</li>
-</li>
-                </ul>
-
-
-                
-                <div className="sports-item-heading">
-                    <h2>Pool Players:</h2>
-                </div>
-                <ul className='guidlines'>
-                    <li>Soham Pathak, Nishant Tomar, Animesh Sharma, Akash Gupta, Neev Patel, Abhishek
-Sahasranshu, Devvrat Hans, Kshitij Kasodkar, Abhishek Tagalpallewar, Arindam Mitra, Pragya
-Arora, Sameer Verma, Tarun Hooda, Ashmit Chhoker, Suraj Borate, Chaman Modi, Chaitanya
-Chaudhary</li>
-
-
-
-
+                    <li>Players are prohibited from consulting with teammates once the game begins. Only the current player is allowed to make moves.</li>
+                    <li>Players must adhere to the predetermined order of play. Deviations from the order without mutual consent may result in penalties.</li>
+                    <li>The game concludes when one side is checkmated, resigns, or runs out of time.</li>
+                    <li>Standard FIDE rules apply to all games unless otherwise stated.</li>
+                    <li>Decisions made by the organizers are final and binding.</li>
                 </ul>
 
                 <div className="sports-item-heading">
-                    <h2>For any queries contact :</h2>
+                    <h2>Marquee Players:</h2>
                 </div>
                 <ul className='guidlines'>
-                                <li>
-                                Animesh Sharma | +91 9691330551
-                             </li>
-                            </ul>
+                    <li>Soham Pathak, Nishant Tomar, Srivaths, Akash Sahoo, Swayam Koregave, Animesh Sharma, Akash Gupta, Neev Patel, Abhishek Sahasranshu, Devvrat Hans, Kshitij Kasodkar, Abhishek Tagalpallewar, Arindam Mitra, Pragya Arora, Sameer Verma, Tarun Hooda, Ashmit Chhoker, Suraj Borate, Chaman Modi, Chaitanya Chaudhary</li>
+                </ul>
+
+                <div className="sports-item-heading">
+                    <h2>Contact:</h2>
+                </div>
+                <ul className='guidlines'>
+                    <li>Animesh Sharma | +91 9691330551</li>
+                    <li>Soham Pathak | +91 7587169949</li>
+                    <li>Akash Gupta | +91 8881254922</li>
+                    <li>Neev Patel | +91 6353166733</li>
+                </ul>
+
                 <div className="register-button">
                     <Link to="/register?game=Chess">Register Now</Link>
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
-
-
         </div>
     )
 }
 
-export default Chess
+export default Chess;

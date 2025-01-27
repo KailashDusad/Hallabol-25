@@ -38,12 +38,17 @@ Anjana S A,
 Sejal Sharbidre,
 Nidhi Kumari, 
 Ayushi Meena,
-Keshar Lahare</li>
-
-
-
-
+Keshar Lahare, Ushasree,
+Janvi, 
+Yashvi,
+Meshva,
+Reha</li>
+<li>Lobsang Kom, Kushal Rathod, Akash KP, Evan Keinz Joy, Swayam Koregave, Aayush More, Adwaith P, Anurag Vishal, Aflah, Prajas Kulkarni, Anshu Kale, Sumedh Wankhede, Jagroop Singh, Aboobacker, Vaibhav, Nirmay, Shernik, Aslam, Keshav,Dhawal,Hriday,Vedant,Lalith</li>
+<li>At max, 3 pool players are allowed in a team.</li>
+<li>Any player/alumni who had been a pool player in any previous edition in "Futsal" will be considered  a pool player in footvolley as well.
+</li>
                 </ul>
+                
                 <div className="sports-item-heading">
                     <h2>Game Rules:</h2>
                 </div>

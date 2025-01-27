@@ -23,8 +23,8 @@ const RegisterForm = () => {
 
   
   const gameMapping = {
-    "Gully Cricket": 6,
-    "Kho-Kho": 8,
+    "Gully Cricket": 7,
+    "Kho-Kho": 9,
     "Footsal": 7,
     "Tug of war": 6,
     "Foot-voley": 6,
@@ -32,9 +32,9 @@ const RegisterForm = () => {
     "Seven Stone": 6,
     "Freesbe": 7,
     "Throw Ball": 6,
-    "Carrom": 4,
+    "Carrom": 2,
     "Dodge Ball": 6,
-    "Chess": 2
+    "Chess": 3
   };
 
   const [teamMembers, setTeamMembers] = useState([]);
