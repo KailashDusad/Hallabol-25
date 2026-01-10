@@ -1,24 +1,36 @@
 import React from 'react';
 import './styles/Team.css';
-import Kushal from '../Team/Kushal.jpg';
-import Adit from '../Team/Adit.jpg';
-import Anurag from '../Team/Anurag.jpg';
-import Rohit from '../Team/Ro1.png';
 import Sobania from '../Team/Sobania.jpg';
 import kd from '../Team/kd1.jpg';
-import om from '../Team/om.jpg';
-import sut from '../Team/sut.jpg';
+import abhitej from '../Team/abhitej.jpg';
+import akash from '../Team/akash.jpg';
+import animesh from '../Team/animesh.jpg';
+import antariksh from '../Team/antariksh.jpg';
+import hriday from '../Team/hriday.jpg';
+import kp from '../Team/kp.jpg';
+import kshitij from '../Team/kshitij.jpg';
+import kunal from '../Team/kunal.jpg';
+import Rohit from '../Team/rohit.jpg';
+ 
+
+
 
 
 const teamData = [
-    { name: 'Adit Rambhia', role: 'Convener', image: Adit, contact:'+91 8850270294' },
-    { name: 'Anurag Vishal', role: 'Convener', image: Anurag, contact:'+91 7738957332' },
-    { name: 'Suteekshna Mishra', role: 'Convener', image: sut, contact:'+91 9044412185' },
-    { name: 'Keshav Sobania', role: 'Core Member', image: Sobania, contact:'+91 7240638176' },
-    { name: 'Kailash Dusad', role: 'Tech Coordinator', image: kd, contact:'+91 9116768618' },
-    { name: 'Omkar R Prabhu', role: 'Core Member', image: om, contact:'+91 8310831731' },
-    { name: 'Rohit Kumar Ram', role: 'Core Member', image: Rohit, contact:'+91 6202626002' },
-    { name: 'Kushal Rathod', role: 'Core Member', image: Kushal, contact:'+91 9081599901' },
+    { name: 'Keshav Sobania', role: 'Sports secy', image: Sobania, contact:'+91 7240638176' },
+    
+    { name: 'Animesh Sharma', role: 'Convener', image: animesh, contact:'+91 9691330551' },
+    { name: 'Antariksh Dongre', role: 'Convener', image: antariksh, contact:'+91 9173606682' },
+    { name: 'Rohit Kumar Ram', role: 'Convener', image: Rohit, contact:'+91 6202626002' },
+    { name: 'Kailash Dusad', role: 'Tech Team ko bulao', image: kd, contact:'+91 9116768618' },
+    { name: 'Abhitej Singh Bhullar', role: 'Core', image: abhitej, contact:'+91 6280120714' },
+    { name: 'Akash Gupta', role: 'Core', image: akash, contact:'+91 8881254922' },
+    
+    { name: 'Hriday Pandya', role: 'Core', image: hriday, contact:'+91 9512061845' },
+    { name: 'Akash K P', role: 'Core', image: kp, contact:'+91 9694177555' },
+    { name: 'Kshitij Giri', role: 'Core', image: kshitij, contact:'+91 7990614365' },
+    { name: 'Kunal Dhamapurkar', role: 'Core', image: kunal, contact:'+91 8010255973' },
+
 ];
 
 const Team = () => (

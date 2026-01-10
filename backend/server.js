@@ -30,7 +30,7 @@ const auth = new google.auth.GoogleAuth({
     scopes: SCOPES,
 });
 
-const spreadsheetId = '1P8GV5XsURYheDH1uz3ba6QCkBFCbwE0l0qarI7xGvQ8'; 
+const spreadsheetId = '1rmQ1QS3qa8BX7HGZwn9FsIH3b0Mtsdmf-63_iHRUFVg'; 
 
 async function getOrCreateSheet(auth, sport) {
     const sheets = google.sheets({ version: 'v4', auth });

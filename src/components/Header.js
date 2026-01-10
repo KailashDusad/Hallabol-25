@@ -19,7 +19,7 @@ const Header = () => (
           <li className="nav-item"><NavLink className="nav-link" to="/register" activeClassName="active">Register</NavLink></li>
           <li className="nav-item"><NavLink className="nav-link" to="/games" activeClassName="active">Games</NavLink></li>
           <li className="nav-item"><NavLink className="nav-link" to="/team" activeClassName="active">Team</NavLink></li>
-          <li className="nav-item"><NavLink className="nav-link" to="/table" activeClassName="active">Table</NavLink></li>
+          {/* <li className="nav-item"><NavLink className="nav-link" to="/table" activeClassName="active">Table</NavLink></li> */}
         </ul>
       </div>
     </div>

@@ -12,6 +12,7 @@ import Throwball from '../static/Throwball.jpg'
 import Carrom from '../static/Carrom.jpg'
 import Dodge from '../static/Dodgeball.jpg'
 import Chess from '../static/Chess.jpg'
+import Basket from '../static/Chess.jpg'
 
 
 const Games = () => (
@@ -32,6 +33,8 @@ const Games = () => (
           { img: Carrom, title: 'Carrom', desc: 'A game of skill and precision.', id:'Carrom'},
           { img: Dodge, title: 'Dodge Ball', desc: 'Dodge, duck, dip, dive and dodge.', id:'Dodgeball'},
           { img: Chess, title: 'TriUnity Chess', desc: 'The ultimate test of strategy.', id:'Chess'},
+          // adding a new game called 3v3 Basketball
+          { img: Basket, title: 'BASKETBALL 3v3', desc: 'Fast-paced basketball action.', id:'Basketball'},
         ].map((game, index) => (
           <div key={index} className="col-md-4 mb-4">
             <div className="game-card">

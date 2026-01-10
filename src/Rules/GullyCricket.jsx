@@ -17,21 +17,21 @@ const GullyCricket = () => {
                     <h2>Pool Players: </h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Jatin Nama, Sakib Ahmed Dar, Bhushan Kape, Dhairya Shah, Hansin Shah, Ayush Abhi, Faizan Bhatt, Raushan Thakur, Ankit Kumar, Aditya Jain, Arpit Sigotiya, Digvijay Singh Parihar, Bhavesh Joshi, Namesh Nishad, Nitesh Nayak, Nitesh Rathod</li>
+                    <li>Jatin Nama, Sakib Ahmed Dar, Bhushan Kape, Dhairya Shah, Hansin Shah, Ayush Abhi, Faizan Bhatt, Raushan Thakur, Ankit Kumar, Aditya Jain, Arpit Sigotiya, Digvijay Singh Parihar, Bhavesh Joshi, Namesh Nishad, Nitesh Nayak, Nitesh Rathod, Shubh Tripathy, Shrawan Kumar, Vaibhav Mishra, Rahul Pandey </li>
                 </ul>
 
                 <div className="sports-item-heading">
                     <h2>Other Pool Players: </h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Aaqib Khan, Aman Singh, Jaideep Singh Barad, Abhinav Singh Yadav, Pushkar Parakh, Hiteshi Meisheri</li>
+                    <li>Aaqib Khan, Aman Singh, Jaideep Singh Barad, Abhinav Singh Yadav, Pushkar Parakh, Dutt Parmar, Jaikishan Kumavat</li>
                 </ul>
 
                 <div className="sports-item-heading">
                     <h2>Staff Pool Players: </h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Ratnesh Singh, Abhijit Mishra, Madhu Vadali, Santosh Raut, Santosh Joshi, Rohit Chaudhary, Rajib Kumar Das, Sachin Patel, Naran Pindoriya, Babloo Sharma</li>
+                    <li>Ratnesh Singh, Abhijit Mishra, Madhu Vadali, Santosh Raut, Santosh Joshi, Rohit Chaudhary, Rajib Kumar Das, Sachin Patel, Naran Pindoriya, Babloo Sharma, Nirav Prajapati</li>
                 </ul>
 
                 <div className="sports-item-heading">

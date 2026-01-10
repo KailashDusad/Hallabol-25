@@ -23,15 +23,16 @@ import Throwball from './Rules/Throwball';
 import Chess from './Rules/Chess';
 import TugOfWar from './Rules/TugOfWar';
 import Ended from './components/Ended';
+import Basketball from './Rules/Basketball';
 
 const App = () => {
   return (
-    <Router basename="/hallabol-25">
+    <Router basename="/hallabol-26">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/games" element={<Games />} />
-        <Route path="/register" element={<Ended />} />
+        <Route path="/register" element={<RegisterForm />} />
         <Route path="/team" element={<Team />} />
         <Route path="/table" element={<Table />} />
         <Route path="/error" element={<ErrorPage />} />
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/rules/Throwball" element={<Throwball />} />
         <Route path="/rules/Chess" element={<Chess />} />
         <Route path="/rules/TugOfWar" element={<TugOfWar />} />
+        <Route path="/rules/Basketball" element={<Basketball />} />
       </Routes>
       <Footer />
     </Router>

@@ -17,7 +17,7 @@ const TugOfWar = () => {
                     <h2>Pool Players: </h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Amartya Tuljapurkar, Hemant Poonia, Rahul Ahirwar, Tushar Chahal, Praveen Bishnoi, Lovekesh Mahale, Ritesh kumar, Manmohan Singh, Srimaan Govindu, Saurabh Kumar</li>
+                    <li>Amartya Tuljapurkar, Hemant Poonia, Rahul Ahirwar, Tushar Chahal, Praveen Bishnoi, Lovekesh Mahale, Ritesh kumar, Manmohan Singh, Srimaan Govindu, Korada Kusal, Sai Charan, Kilari Venkatesh, Ram Charan, Sai Saketha </li>
                 </ul>
                 <div className="sports-item-heading">
                     <h2>Team Formation Rules:</h2>
@@ -27,7 +27,7 @@ const TugOfWar = () => {
                     <li>The team should consist of 6 players, of which 5 will be on-field players, and 1 will be a substitute player.</li>
                     <li>The team should have members from at least 2 different batches. (Staff and Faculty will be considered as different batches).</li>
                     <li>The team cannot have more than two pool players among the 6 registered members.</li>
-                    <li>There is a weight restriction for each team; for the male category, the total weight of the on-field players cannot exceed 400kgs, and for the female category, the total weight of the on-field players cannot exceed 360kgs.</li>
+                    <li>There is a weight restriction for each team; for the male category, the total weight of the on-field players cannot exceed 380kgs, and for the female category, the total weight of the on-field players cannot exceed 340kgs.</li>
                     <li>There will be a surprise element of the game, which will be disclosed before the game starts.</li>
                 </ul>
                 <div className="sports-item-heading">

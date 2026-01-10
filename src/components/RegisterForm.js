@@ -34,7 +34,8 @@ const RegisterForm = () => {
     "Throw Ball": 6,
     "Carrom": 2,
     "Dodge Ball": 6,
-    "Chess": 3
+    "Chess": 3,
+    "Basketball": 5,
   };
 
   const [teamMembers, setTeamMembers] = useState([]);
