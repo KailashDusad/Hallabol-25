@@ -68,6 +68,17 @@ const Basketball = () => {
                 <ul className='guidlines'>
                     <li>Aditya Kumar, Siddharth Verma, Gulshan Kumar, Atharv Dapse, Divyanshu, Hemcharan Varma, Kowel P, Ayush Alhat, Ankit joshi, Yash choudhary, Yuvraj, Abhinav, Gayatri Priyadarsini, Harshita Singh, Siya Patil, Prerna Sawane, Ankita Mohanpuriya, Raima Rao, Bhoomi.</li>
                 </ul>
+                <div className="sports-item-heading">
+                    <h2>For any queries contact :</h2>
+                </div>
+                <ul className='guidlines'>
+                    <li>
+                    Harshita Singh | 6355766157
+                    </li>
+                    <li>
+                    Siddharth verma | 9026879346
+                    </li>
+                </ul>
 
                 <div className="register-button">
                     <Link to="/register?game=Basketball">Register Now</Link>

@@ -69,9 +69,18 @@ const GullyCricket = () => {
                     <h2>For any queries contact :</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Arpit Sigotiya | 8349831281</li>
-                    <li>Dhairya Shah | 6353367509</li>
-                    <li>Rathod Nitesh | 9550373566</li>
+                    <li>
+                        Dutt Parmar	|	8160538184
+                    </li>
+                    <li>
+                        Vinit Parmar | 9558923855
+                        </li>
+                        <li>
+                        Ayush Abhi | 9835815150
+                        </li>
+                        <li>
+                        Jayraj Vanza | 6353127793
+                        </li>
                 </ul>
                 <div className="register-button">
                     <Link to="/register?game=Gully Cricket">Register Now</Link>

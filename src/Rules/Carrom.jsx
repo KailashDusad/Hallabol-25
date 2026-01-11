@@ -95,7 +95,12 @@ const Carrom = () => {
                     <h2>For any queries contact:</h2>
                 </div>
                 <ul className='guidlines'>
-                  <li>Animesh Sharma | +91 9691330551</li>
+                  <li>
+                    Alok Shukla  | 6009828794
+                  </li>
+                  <li>
+                    Aadi Ankit Modi  | 9265302580
+                  </li>
                 </ul>
                 <div className="register-button">
                   <Link to="/register?game=Carrom">Register Now</Link>

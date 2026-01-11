@@ -16,8 +16,7 @@ const Badminton = () => {
                     <h2>Pool Players: </h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Gaurav rawat, praanshu sharan, Prudhvi sunil, surbhi khewle, hrishitha sivakumar, siddharth shah, Pavan Deekshith, Dhiraj, Keerthan, Shriniket, Pranav ram, Arth Dubey,  Debasmita, Aanchal Sharma, Hiteshi, Lavanya Gupta, Chaitanya Chaudhary  and Rony damor.
-</li>
+                    <li>Lavanya, Keerthan Varma, Shriniket Behera, Chaitanya Choudhary, Pranav Ram, Manav, Yahasvi Rao, Aanchal Sharma, Nakshatra Lad, Surbhi Khewle, Prudhvi Sunil, Karthik Chandra, Kushal Sonara, Diraj, Deekshith, Arth Dubey, Archit Deshmukh, Gurparas singh, Hiteshi Meisheri, Cheshta, Rony Damor</li>
                 
                 </ul>
                 <div className="sports-item-heading">
@@ -65,11 +64,11 @@ const Badminton = () => {
                             </div>
                             <ul className='guidlines'>
                                 <li>
-                                Banavath Diraj Naik | 9030969308
+                                Praneet Khairnar | 9619000949
                              </li>
-                                <li>
-                                    Chinthala Shivamani  | 8309260573
-                                </li>
+                             <li>
+                                Kushal Sonara | 9979361179
+                             </li>
                             </ul>
                             <div className="register-button">
                                 <Link to="/register?game=4-a-side-baddy">Register Now</Link>

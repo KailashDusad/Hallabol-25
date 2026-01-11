@@ -66,11 +66,11 @@ const Dodgeball = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Dhruv jalan | 9820616210
+                                Yash Patkar | 9821934428
                              </li>
-                                <li>                
-                                    Ayush umare  | 7820975758
-                                </li>
+                             <li>
+                                Raj Kumar Gupta | 6205459815
+                             </li>
                             </ul>
                 <div className="register-button">
                     <Link to="/register?game=Dodge Ball">Register Now</Link>

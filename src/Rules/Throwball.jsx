@@ -62,11 +62,11 @@ const Throwball = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Priyanka | 7665151733 
+                                Ayushi Meena | 6350536567
                              </li>
-                                <li>
-                                Swati | 9406633187
-                                </li>
+                             <li>
+                                Madhu Dhayal | 8829854613
+                             </li>
                             </ul>
                 <div className="register-button">
                 <Link to="/register?game=Throw Ball">Register Now</Link>

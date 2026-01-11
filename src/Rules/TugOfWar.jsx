@@ -60,8 +60,12 @@ const TugOfWar = () => {
                     <h2>For any queries contact:</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Kshitij Suresh Giri | 7990614365</li>
-                    <li>Abhitej Singh Bhullar | 6280120714</li>
+                    <li>
+                        Jash Pasad | 8433685708
+                    </li>
+                    <li>
+                        Swami Aryanathan | 7569004858
+                    </li>
                 </ul>
                 <div className="register-button">
                     <Link to="/register?game=Tug of war">Register Now</Link>

@@ -36,10 +36,10 @@ const SevenStones = () => {
                         try to stop them from doing so by trying to hit players of team A below their Waist.</li>
                     <li> At a time, only one player of Team A is allowed in the inner circle for the rearrangement of stones, and a maximum of 3 players of Team B are allowed in the square but outside
                         the circle.</li>
-                    <li>Team B has to out 2 players (3 in case of at least one girl in team A)  to gain 2
-                        points before the arrangements of the stones by the opposite team. No Points will be awarded to team B if they out only one player.</li><li> If time runs out without arranging the stone, Team B gets 1 point.</li>
-                    <li> After the rearrangement of stones, the player of Team A should shout ‘SATOLIYA’ loud and clear while tracing a circle around the pile; then, it gets 2 points. If a player of Team
-                        A shouts ‘SATOLIYA’ without completing the pile in any way, Team B scores one point.</li>
+                    <li>The attacking team will get 2 points for stacking stones in 90 seconds without getting out (3 players).</li>
+                    <li>If the attacking team fails to break the stone tower, the defending team will get 1 point.</li>
+                    <li>The defending team will get 1 point if they defend the attacking team to rebuild the stone stack.</li>
+                    <li>The defending team will get 2 points if they out 3 players from the attacking team.</li>
                     <li>After three turns of each team, the team with more cumulative points will be declared the
                         winner.</li>
                     <li>In case of a tie, the winner will be decided by a bowl out (The team will be awarded a
@@ -65,10 +65,10 @@ const SevenStones = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Dhruv shah | 8849571993
+                                Boda Sandeep | 7702710232
                              </li>
                                 <li>
-                                Tamanna Meena  | 8302029407
+                                    Krishna Kumar palsania | 8619555195
                                 </li>
                             </ul>
                 <div className="register-button">

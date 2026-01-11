@@ -22,10 +22,11 @@ const teamData = [
     { name: 'Animesh Sharma', role: 'Convener', image: animesh, contact:'+91 9691330551' },
     { name: 'Antariksh Dongre', role: 'Convener', image: antariksh, contact:'+91 9173606682' },
     { name: 'Rohit Kumar Ram', role: 'Convener', image: Rohit, contact:'+91 6202626002' },
-    { name: 'Kailash Dusad', role: 'Tech Team ko bulao', image: kd, contact:'+91 9116768618' },
+
+    { name: 'Kailash Dusad', role: 'Tech Coordinator', image: kd, contact:'+91 9116768618' },
+    
     { name: 'Abhitej Singh Bhullar', role: 'Core', image: abhitej, contact:'+91 6280120714' },
     { name: 'Akash Gupta', role: 'Core', image: akash, contact:'+91 8881254922' },
-    
     { name: 'Hriday Pandya', role: 'Core', image: hriday, contact:'+91 9512061845' },
     { name: 'Akash K P', role: 'Core', image: kp, contact:'+91 9694177555' },
     { name: 'Kshitij Giri', role: 'Core', image: kshitij, contact:'+91 7990614365' },

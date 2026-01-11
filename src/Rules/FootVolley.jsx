@@ -27,23 +27,21 @@ const FootVolley = () => {
                     <h2>Pool Players:</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Swati Rawat, 
-Manasvi Choudhary, 
-Vishva Parmar,
-Pinki saini, 
-Priyanka, 
-Anshika, 
-Ananya Pawar,
-Anjana S A, 
-Sejal Sharbidre,
-Nidhi Kumari, 
-Ayushi Meena,
-Keshar Lahare, Ushasree,
-Janvi, 
-Yashvi,
-Meshva,
-Reha</li>
-<li>Lobsang Kom, Kushal Rathod, Akash KP, Evan Keinz Joy, Swayam Koregave, Aayush More, Adwaith P, Anurag Vishal, Aflah, Prajas Kulkarni, Anshu Kale, Sumedh Wankhede, Jagroop Singh, Aboobacker, Vaibhav, Nirmay, Shernik, Aslam, Keshav,Dhawal,Hriday,Vedant,Lalith</li>
+                    <li>
+                        Anshika, 
+Ayushi  Meena,
+Lakshika Vinod Aswal,
+Madhu  Dhayal,
+Madhvika Vasava, 
+Manasvi  Choudhary,
+Neha  Budhani,
+Pinki  Saini,
+Reha  Panigrahi,
+Sejal Jaysing Sharbidre,
+Toshika  Kumawat,
+Vishva Sunilbhai Parmar, Keshar lahare,
+Ushashree, Saloni shinde</li>
+<li>Ganivada Lalith, Kushal Rathod, Akash KP, Evan Keinz Joy, Divisht, Aayush More, Adwaith P, Tatagatha Kar, Prajas Kulkarni, Sumedh Wankhede, Jagroop Singh, Arjun K Reju, Mohammed Shibin, Mustansir Biscuitwala, Vaibhav, Nirmay, Shernik, Aslam</li>
 <li>At max, 3 pool players are allowed in a team.</li>
 <li>Any player/alumni who had been a pool player in any previous edition in "Futsal" will be considered  a pool player in footvolley as well.
 </li>
@@ -117,11 +115,11 @@ Reha</li>
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Anjana S A  | 9074936379
+                                Akshay	| 6376383247
                              </li>
-                                <li>
-                                Vishal  | 7874640284
-                                </li>
+                             <li>
+                                Anshika	| 6376426580
+                             </li>
                             </ul>
                 <div className="register-button">
                 <Link to="/register?game=Foot-voley">Register Now</Link>

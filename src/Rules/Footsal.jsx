@@ -84,7 +84,7 @@ const Footsal = () => {
                     <h2>Pool Players:</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Lobsang Kom, Kushal Rathod, Akash KP, Evan Keinz Joy, Swayam Koregave, Aayush More, Adwaith P, Anurag Vishal, Aflah, Prajas Kulkarni, Anshu Kale, Sumedh Wankhede, Jagroop Singh, Aboobacker, Vaibhav, Nirmay, Shernik, Aslam, Keshav.</li>
+                    <li>Ganivada Lalith, Kushal Rathod, Akash KP, Evan Keinz Joy, Divisht, Aayush More, Adwaith P, Tatagatha Kar, Prajas Kulkarni, Sumedh Wankhede, Jagroop Singh, Arjun K Reju, Mohammed Shibin, Mustansir Biscuitwala, Vaibhav, Nirmay, Shernik, Aslam, Aflah, Aboobacker</li>
                     <li><span style={{color:"#F00"}}>*Note:</span> Any alumni who have previously been pool players will be considered pool players for this edition as well.</li>
 
 
@@ -97,14 +97,11 @@ const Footsal = () => {
                 </div>
                 <ul className='guidlines'>
                                 <li>
-                                Lobsang Kom | 9774342155
-                             </li>
-                                <li>
-                                Hriday Pandya | 9512061845
-                                </li>
-                                <li>                  
-                                Manas Arasada | 6360665240
-                                </li>
+                                Evan Keinz Joy | 8866121690
+                            </li>
+                            <li>
+                                Kunal Khichi | 8699585527
+                            </li>
                             </ul>
                 <div className="register-button">
                     <Link to="/register?game=Footsal">Register Now</Link>

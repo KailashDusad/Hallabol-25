@@ -39,17 +39,19 @@ const Chess = () => {
                     <h2>Marquee Players:</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Soham Pathak, Nishant Tomar, Srivaths, Akash Sahoo, Swayam Koregave, Animesh Sharma, Akash Gupta, Neev Patel, Abhishek Sahasranshu, Devvrat Hans, Kshitij Kasodkar, Abhishek Tagalpallewar, Arindam Mitra, Pragya Arora, Sameer Verma, Tarun Hooda, Ashmit Chhoker, Suraj Borate, Chaman Modi, Chaitanya Chaudhary</li>
+                    <li>Aadi Modi, Abhishek Sahasranshu, Abhishek Tagalpallewar, Akash Gupta, Akash Sahoo, Animesh Sharma, Arham Gandhi, Arindam Mitra, Ashmit Chhoker, Chaitanya Chaudhary, Chaman Modi, Devvrat Hans, Kshitij Kasodkar, Neev Patel, Nishant Tomar, Pragya Arora, Rudraksh Verma, Sameer Verma, Shreyas Purkar, Soham Pathak, Srivaths, Subhranil Majumder, Suraj Borate, Swayam Bhatt, Swayam Koregave, Tarun Hooda, Tejas Joshi</li>
                 </ul>
 
                 <div className="sports-item-heading">
                     <h2>Contact:</h2>
                 </div>
                 <ul className='guidlines'>
-                    <li>Animesh Sharma | +91 9691330551</li>
-                    <li>Soham Pathak | +91 7587169949</li>
-                    <li>Akash Gupta | +91 8881254922</li>
-                    <li>Neev Patel | +91 6353166733</li>
+                    <li>
+                        Neev Bharatkumar Patel  | 6353166733
+                        </li>
+                        <li>
+                        Arindam  | 6290538788
+                        </li>
                 </ul>
 
                 <div className="register-button">

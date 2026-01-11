@@ -6,13 +6,13 @@ import Futsal from '../static/Futsal.jpg'
 import Tug from '../static/TugOfWar.jpg'
 import FootV from '../static/FootVolley.jpg'
 import BadM from '../static/Badminton.jpg'
-import Saven from '../static/SevenStones.jpg'
+import Saven from '../static/savenstone_la.jpg'
 import Frisbee from '../static/UltimateFrisbee.jpg'
 import Throwball from '../static/Throwball.jpg'
 import Carrom from '../static/Carrom.jpg'
 import Dodge from '../static/Dodgeball.jpg'
 import Chess from '../static/Chess.jpg'
-import Basket from '../static/Chess.jpg'
+import Basket from '../static/3v3.jpg'
 
 
 const Games = () => (
