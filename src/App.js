@@ -24,7 +24,7 @@ import Chess from './Rules/Chess';
 import TugOfWar from './Rules/TugOfWar';
 import Ended from './components/Ended';
 import Basketball from './Rules/Basketball';
-
+ 
 const App = () => {
   return (
     <Router basename="/hallabol-26">
