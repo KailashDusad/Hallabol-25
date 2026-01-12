@@ -40,6 +40,7 @@ const Chess = () => {
                 </div>
                 <ul className='guidlines'>
                     <li>Aadi Modi, Abhishek Sahasranshu, Abhishek Tagalpallewar, Akash Gupta, Akash Sahoo, Animesh Sharma, Arham Gandhi, Arindam Mitra, Ashmit Chhoker, Chaitanya Chaudhary, Chaman Modi, Devvrat Hans, Kshitij Kasodkar, Neev Patel, Nishant Tomar, Pragya Arora, Rudraksh Verma, Sameer Verma, Shreyas Purkar, Soham Pathak, Srivaths, Subhranil Majumder, Suraj Borate, Swayam Bhatt, Swayam Koregave, Tarun Hooda, Tejas Joshi</li>
+                    <li><span style={{color:"#F00"}}>*Note:</span> Any alumni who have previously been pool players will be considered pool players for this edition as well.</li>
                 </ul>
 
                 <div className="sports-item-heading">

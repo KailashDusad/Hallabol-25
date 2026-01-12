@@ -59,11 +59,11 @@ async function getOrCreateSheet(auth, sport) {
         });
 
         const headerValues = [
-            ['Sport', 'Team Name', 'Captain Name', 'Captain Roll No.', 'Captain Email', 'Captain Contact'],
+            ['Sport', 'Team Name', 'Captain Name', 'Captain Roll No.', 'Captain Email', 'Captain Contact', 'Hostel Distribution'],
         ];
         await sheets.spreadsheets.values.update({
             spreadsheetId,
-            range: `${sport}!A1:F1`,
+            range: `${sport}!A1:G1`,
             valueInputOption: 'RAW',
             requestBody: { values: headerValues },
         });
@@ -107,6 +107,7 @@ app.post('/register', async (req, res) => {
         teamleaderroll,
         teamleaderemail,
         teamleadercontact,
+        hostelPlayerCounts = {},
         members = [],
     } = req.body;
 
@@ -115,7 +116,13 @@ app.post('/register', async (req, res) => {
         return res.status(400).json({ error: 'Missing required fields!' });
     }
 
-    const rowData = [gameselect, teamname, teamleader, teamleaderroll, teamleaderemail, teamleadercontact];
+    // Create hostel distribution string (only include hostels with non-zero players)
+    const hostelDistribution = Object.entries(hostelPlayerCounts)
+        .filter(([hostel, count]) => parseInt(count) > 0)
+        .map(([hostel, count]) => `${hostel}: ${count}`)
+        .join(', ');
+
+    const rowData = [gameselect, teamname, teamleader, teamleaderroll, teamleaderemail, teamleadercontact, hostelDistribution];
 
     // Process members array
     for (let i = 0; i < members.length; i += 2) {

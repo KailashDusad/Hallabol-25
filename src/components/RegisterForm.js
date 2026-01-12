@@ -18,6 +18,20 @@ const RegisterForm = () => {
     teamleaderroll: '',
     teamleaderemail: '',
     teamleadercontact: '',
+    hostelPlayerCounts: {
+      'Aibaan': '0',
+      'Beauki': '0',
+      'Chimair': '0',
+      'Duven': '0',
+      'Emiet': '0',
+      'Firpeal': '0',
+      'Griwiksh': '0',
+      'Hiqom': '0',
+      'Ijokha': '0',
+      'Jurqia': '0',
+      'Kyzeel': '0',
+      'Lekhaaq': '0',
+    },
     members: [],
   });
 
@@ -38,12 +52,31 @@ const RegisterForm = () => {
     "Basketball": 5,
   };
 
+  const hostels = [
+    "Aibaan",
+    "Beauki",
+    "Chimair",
+    "Duven",
+    "Emiet",
+    "Firpeal",
+    "Griwiksh",
+    "Hiqom",
+    "Ijokha",
+    "Jurqia",
+    "Kyzeel",
+    "Lekhaaq",
+  ];
+
   const [teamMembers, setTeamMembers] = useState([]);
   const [alert, setAlert] = useState({ show: false, type: '', message: '' });
 
   const handleGameChange = (e) => {
     const selectedGame = e.target.value;
-    setFormData({ ...formData, gameselect: selectedGame });
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      gameselect: selectedGame,
+      hostelPlayerCounts: prevFormData.hostelPlayerCounts
+    }));
 
     // Dynamically set team members based on the selected game
     const playerCount = gameMapping[selectedGame] || 0;
@@ -68,9 +101,18 @@ const RegisterForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.gameselect || !formData.teamname || !formData.teamleader || !formData.teamleaderroll || !formData.teamleaderemail || !formData.teamleadercontact || teamMembers.some((member) => !member.name || !member.rollNo)) {
+    const allHostelsFilled = Object.values(formData.hostelPlayerCounts).every(count => count !== '');
+    const totalHostelPlayers = Object.values(formData.hostelPlayerCounts).reduce((sum, count) => sum + parseInt(count || 0), 0);
+    const requiredPlayers = gameMapping[formData.gameselect] || 0;
+    
+    if (!formData.gameselect || !formData.teamname || !formData.teamleader || !formData.teamleaderroll || !formData.teamleaderemail || !formData.teamleadercontact || !allHostelsFilled || teamMembers.some((member) => !member.name || !member.rollNo)) {
       // alert('Please fill all the fields.');
       showAlert('warning', 'Please fill all the required fields!');
+      return;
+    }
+
+    if (totalHostelPlayers !== requiredPlayers) {
+      showAlert('warning', `Total players from all hostels (${totalHostelPlayers}) must equal required players for ${formData.gameselect} (${requiredPlayers})!`);
       return;
     }
     setLoading(true);
@@ -98,6 +140,20 @@ const RegisterForm = () => {
           teamleaderroll: '',
           teamleaderemail: '',
           teamleadercontact: '',
+          hostelPlayerCounts: {
+            'Aibaan': '0',
+            'Beauki': '0',
+            'Chimair': '0',
+            'Duven': '0',
+            'Emiet': '0',
+            'Firpeal': '0',
+            'Griwiksh': '0',
+            'Hiqom': '0',
+            'Ijokha': '0',
+            'Jurqia': '0',
+            'Kyzeel': '0',
+            'Lekhaaq': '0',
+          },
           members: [],
         });
         setTeamMembers([]);
@@ -209,6 +265,34 @@ const RegisterForm = () => {
             </div>
           ))}
         </div>
+
+        <div className="mb-4">
+          <h5 className="mb-3">Number of Players from Each Hostel</h5>
+          <div className="row">
+            {hostels.map((hostel) => (
+              <div key={hostel} className="col-md-6 mb-3">
+                <label htmlFor={`hostel-${hostel}`} className="form-label">{hostel}</label>
+                <input
+                  id={`hostel-${hostel}`}
+                  name={`hostel-${hostel}`}
+                  type="number"
+                  min="0"
+                  className="form-control"
+                  value={formData.hostelPlayerCounts[hostel]}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    hostelPlayerCounts: {
+                      ...formData.hostelPlayerCounts,
+                      [hostel]: e.target.value
+                    }
+                  })}
+                  required
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
         {loading ? (
           <>
           <div className="spinner-border" style={{color:'#ff7f50'}} role="status">
